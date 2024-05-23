@@ -21,7 +21,7 @@ public class ModuleController : MonoBehaviour
         KeyCode deleteKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), randomChar.ToString());
         Debug.Log("Delete key: " + randomChar);
     }
-
+//테스트
     void Update()
     {
         // 키보드 입력 확인
@@ -31,7 +31,8 @@ public class ModuleController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        // 모듈이 생성된 후에 입력이 없다면, 설정된 대기 시간 후에 모듈 파괴
+        // 모듈이 생성된 후에 입력이 없다면, 설정된 대기 시간 후에 모듈 파괴합니다.
+        
         destructionDelay -= Time.deltaTime;
         if (destructionDelay <= 0)
         {
