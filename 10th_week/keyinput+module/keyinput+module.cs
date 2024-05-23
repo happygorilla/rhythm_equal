@@ -38,4 +38,15 @@ public class ModuleController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void DestroyModule()
+    {
+        // 파괴 효과가 있다면 재생
+        if (destructionEffect != null)
+        {
+            Instantiate(destructionEffect, transform.position, Quaternion.identity);
+        }
+
+        // 모듈 파괴
+        Destroy(gameObject);
+    }
 }
